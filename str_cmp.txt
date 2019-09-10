@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<strings.h>
+void main()
+{
+    int la,lb,i,j;
+    char a[100],b[100];
+    printf("enter 2 strings");
+    scanf("%s %s",a,b);
+    la=strlen(a);
+    lb=strlen(b);
+    for(i=0;i<la;i++)
+    {
+        //if(strcmp(a[i],b[i])==0)
+        if(a[i]==b[i])
+           printf("%c",a[i]);
+        else
+          break;
+    }
+    
+}
