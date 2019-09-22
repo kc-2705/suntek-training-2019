@@ -1,0 +1,22 @@
+//fibonocci series 
+
+#include<stdio.h>
+int n,f=0,s=1,t;
+void main()
+{
+    printf("enter any no ");
+    scanf("%d ",&n);
+    printf("%d %d ",f,s);
+    fib(n,f,s);
+}
+void fib(int n,int f,int s)
+{
+    while(n-2)
+    {
+        t=f+s;
+        printf("%d ",t);
+        f=s;
+        s=t;
+        n--;
+    }
+}

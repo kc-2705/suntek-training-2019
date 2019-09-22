@@ -1,0 +1,32 @@
+//power of a no using recursion
+
+
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+    int n,x;
+    float r;
+    printf("enter no and power ");
+    scanf("%d %d ",&n,&x);
+    r=pow(n,x);
+    printf("%f ",r);
+}
+
+***********************************************
+// power of a no using iteration
+
+#include<stdio.h>
+void main()
+{
+    int n,x,r;
+    printf("enter no and power ");
+    scanf("%d %d ",&n,&x);
+    r=n;
+    while(x-1)
+    {
+   r=r*n;
+   x--;
+    }
+    printf("%d",r);
+}

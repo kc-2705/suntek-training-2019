@@ -1,0 +1,87 @@
+//prime or not
+
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+    int n,i,cnt=0;
+    printf("enter no ");
+    scanf("%d ",&n);
+    if(n<=0)
+       printf("invalid");
+    else if (n==1)
+       printf("neither prime nor composite");
+    else
+    {
+        for(i=1;i<=n;i++)
+        {
+            if(n%1==0)
+               cnt++;
+            else
+               continue;
+        }
+    }
+    if(cnt==2)
+       printf("prime");
+    else
+       printf(" not prime");
+}
+
+*************************************************************************************
+//prime or not using recursion
+
+#include<stdio.h>
+int n,i=1,cnt=0;
+int prime(int,int);
+void main()
+{
+    printf("enter no ");
+    scanf("%d ",&n);
+    if(n<=0)
+        printf("invalid input");
+    else if (n==1)
+        printf("neither prime nor composite");
+    else
+    {
+       if(prime(n,i) ==2)
+           printf("prime no");
+    else
+          printf("not prime no");
+    }
+}
+int prime(int n, int i )
+{
+    if(i<=n)
+    {
+        if(n % i ==0)
+            cnt++;
+        prime(n,i+1);
+    }
+        return cnt;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+//first missing positive integer
+
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+    int a[100],n,i,j,num=1;
+    
+    printf("enter size of array ");
+    scanf("%d",&n);
+    printf("enter array elements");
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(a[i]>a[j])
+            {
+            int t;
+            t=a[i];
+            a[i]=a[j];
+            a[j]=t;
+            }
+            else
+              continue;
+        }
+    }
+    printf("elements after sorting ");
+    for(i=0;i<n;i++)
+        printf(" %d ",a[i]);
+    for(i=0;i<n;i++)
+     {
+        if(a[i]<0)
+            continue;
+        if(a[i]<0 && i==(n-1))
+            printf("\n element is %d",num);
+        if(a[i]+1 != a[i+1])
+            {printf("\n element is %d",a[i]+1);
+            exit(1);}
+        if(a[i]+1 == a[i+1] && i==(n-1))
+            printf("\n element is %d",a[i+1]+1);
+       
+     }
+}

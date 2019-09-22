@@ -1,0 +1,18 @@
+// pow(n,x) mod m
+
+
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+    int n,x,m,r;
+    printf("enter n,x,m value");
+    scanf("%d %d %d",&n,&x,&m);
+    r=pow(n,x);
+    int a= (r) % m;
+    printf("%d ",a);
+
+}
+
+
+

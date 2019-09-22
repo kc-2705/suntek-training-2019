@@ -1,0 +1,56 @@
+//factorial using iterations
+
+#include<stdio.h>
+void main()
+{
+    int n,x;
+    printf("enter any no");
+    scanf("%d",&n);
+    if(n<0)
+       printf("invalid input");
+    else 
+    {
+        x=fact(n);
+        printf("%d",x);
+    }
+}
+int fact(int n)
+{
+    int f=1,i;
+    if(n==0)
+       return f;
+    else
+    {
+      for(i=1;i<=n;i++)
+        f=f*i;
+    }
+        return f;
+}
+
+*********************************************************************************
+// factorial using recursion
+
+
+#include<stdio.h>
+void main()
+{
+    int n,x;
+    printf("enter any no");
+    scanf("%d",&n);
+    if(n<0)
+       printf("invalid input");
+    else 
+    {
+        x=fact(n);
+        printf("%d",x);
+    }
+}
+int fact(int n)
+{
+    int f=1,i;
+    if(n==0)
+       return f;
+    else 
+      {while(n>0)
+        return n*fact(n-1);}
+}
